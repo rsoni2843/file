@@ -7,22 +7,25 @@ function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const api = `https://reqres.in/api/users?page=1&per_page=9`;
 
-  function getData() {
+  // Fetching data here
+  const getData = async () => {
     setLoading(true);
-    fetch(`https://reqres.in/api/users?page=1&per_page=9`)
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res.data);
-        setLoading(false);
-        setError(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setError(true);
-        setLoading(false);
-      });
-  }
+    try {
+      let res = await fetch(api);
+      let data = await res.json();
+      // setting the data here we get in response from api
+      setData(data.data);
+      setLoading(false);
+      setError(false);
+    } catch (err) {
+      console.log(err);
+      // If there is error in our application while fetching api
+      setError(true);
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="App">

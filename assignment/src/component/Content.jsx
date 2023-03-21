@@ -6,21 +6,11 @@ import Loader from "./Loader";
 const Content = ({ error, loading, data }) => {
   // When the promise is rejected
   if (error) {
-    return (
-      <>
-        <h1>Error...</h1>
-        <Error />
-      </>
-    );
+    return <Error />;
   }
   // When the promise in pending
   if (loading) {
-    return (
-      <>
-        <h1>Loading...</h1>
-        <Loader />
-      </>
-    );
+    return <Loader />;
   }
   // When the promise is fulfilled
   return (

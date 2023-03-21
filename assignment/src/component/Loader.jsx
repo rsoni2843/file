@@ -4,6 +4,7 @@ import React from "react";
 const Loader = () => {
   return (
     <>
+      <h1>Loading...</h1>
       <img
         src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator.gif"
         alt="LoaderImage"

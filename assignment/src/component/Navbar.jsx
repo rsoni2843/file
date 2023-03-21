@@ -4,7 +4,7 @@ const logo =
   "https://seeklogo.com/images/A/apple-logo-52C416BDDD-seeklogo.com.png";
 
 const Navbar = ({ triggerData }) => {
-  // Using some navbar effects here
+  // Using some navbar css effects here
   useEffect(() => {
     const nav = document.querySelector("#nav");
     const onScroll = (event) => {
