@@ -8,5 +8,5 @@ This assignment has taken me less than 1 hour to complete.
 ## Deployed Link
 https://precious-gnome-f91c80.netlify.app/
 
-App Page
+## App Page
 ![App Screenshot](https://i.stack.imgur.com/SybTt.jpg)
